@@ -4,7 +4,7 @@ const mongoDB = require('mongoose')
 const cookieSession = require('cookie-session')
 const passport = require('passport')
 config = require('config');
-let PORT = config.get('PORT')
+let PORT = process.env.PORT || config.get('PORT')
 
 app = express();
 app.use(bodyParser.json());
